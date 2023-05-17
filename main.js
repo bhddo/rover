@@ -1,4 +1,4 @@
-canvas = document.getElementById("myCanvas");
+canvas = document.getElementById('myCanvas');
 ctx = canvas.getContext("2d");
 
 roverWidth = 100;
@@ -24,10 +24,13 @@ function add()
 
 function uploadBackground()
 {
-    ctx.drawImage(roverImgTag, roverX, roverY, roverWidth, roverHeight);
+    ctx.drawImage(backgroundImgTag, 0, 0, canvas.width, canvas.height);
 }
 
-
+function uploadrover()
+{
+    ctx.drawImage(roverImgTag, roverX, roverY, roverWidth, roverHeight);
+}
 window.addEventListener("keydown", myKeyDown); 
 
 function myKeyDown(e)
@@ -66,7 +69,7 @@ uploadrover();
 }
 function down()
 {
-if(roverY <=50)
+if(roverY <=500)
 {
 roverY = roverY + 10; 
 console.log("quando a tecla para baixo for pressionada, x = " + roverX + " | y = " +roverY);
